@@ -14,6 +14,13 @@ function openInNewTab(url) {
     window.open(url, '_blank').focus();
 }
 
+function getPrompt() {
+    if(isAbout)
+        return  "<b>></b>";
+    else
+        return "<div><span class='ownerTerminal'><b>user@byteflow</b></span>:<b>~$</b> ";
+}
+
 
 window.addEventListener("DOMContentLoaded", function () {
     let n = document.getElementById("cmd");
@@ -29,10 +36,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
 */
     function triggerCommand(i) {
         if (
-            ((e.innerHTML +=
-                    "<div><span class='ownerTerminal'><b>user@byteflow</b></span>:<b>~$</b> " +
-                    i +
-                    "</div>"),
+            ((e.innerHTML +=getPrompt() + i + "</div>"),
                 (n.value = ""),
                 "skills" === i || "s" === i)
         )
@@ -112,6 +116,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
            [<span class="commandName">ask What is byteflow?</span>]</div>`
         } else if ("about" === i) {
             e.innerHTML += "<div>You can now ask any question about Byteflow. To stop the conversation, please type and enter [<span class='commandName'>quit</span>].</div>"
+            
             prompt.innerHTML = "<b>></b>" // colocar o prompt como >
             n.style.textIndent = "18px"; // reduzir o padding da primeira linha da textarea
             isAbout = true;
@@ -275,7 +280,10 @@ let suggestions = [
     skillsBar =
     '\n<div class="container">\n  <div class="flex">\n    <h2>HTML/EJS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem1"></div>\n    </div>\n    <h3>100%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>CSS/SCSS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem2"></div>\n    </div>\n    <h3>100%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>JS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem3"></div>\n    </div>\n    <h3>95%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>TS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem4"></div>\n    </div>\n    <h3>55%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>NODE.JS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem5"></div>\n    </div>\n    <h3>85%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>REACT.JS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem6"></div>\n    </div>\n    <h3>15%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>GO:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem7"></div>\n    </div>\n    <h3>5%</h3>\n  </div>\n\n  <div class="flex">\n  <h2>RUST:</h2>\n  <div class="skillBar">\n    <div class="skillBarItem8"></div>\n  </div>\n  <h3>5%</h3>\n</div>\n</div>',
     projectCmd =
-    '\n<div class="projectsDiv">\n<article\n  class="article-wrapper"\n  onclick="linkHref(\'https://github.com/zachey01/MimiCMS/\')"\n>\n  <div class="project-info">\n    <div class="flex-pr">\n      <div class="project-title text-nowrap">MimiCMS</div>\n    </div>\n    <div class="flex-pr">\n      <p class="project-description">\n        Modular, fast CMS for <code>CS:GO</code>, <code>CS2</code> (coming soon)\n        servers.\n      </p>\n    </div>\n  </div>\n</article>\n\n<article\n  class="article-wrapper"\n  onclick="linkHref(\'https://github.com/zachey01/terminalPortfolio\')"\n>\n  <div class="project-info">\n    <div class="flex-pr">\n      <div class="project-title text-nowrap">terminal<br />Portfolio</div>\n    </div>\n    <div class="flex-pr">\n      <p class="project-description">\n        A personal website styled for UNIX terminal.\n      </p>\n    </div>\n  </div>\n</article>\n\n</div>\n',
+    '\n<div class="projectsDiv">\n<article\n  class="article-wrapper"\n  onclick="openInNewTab(\'https://admiravelrotina.com\')"\n>\n  <div class="project-info">\n    <div class="flex-pr">\n   <code><\code>   <div class="project-title text-nowrap">Admirável </div>\n<div class="project-title text-nowrap"> Rotina Lda.</div>\n    </div>\n    <div class="flex-pr">\n      <p class="project-description">\n Optimizing product listings using ML and text mining. </p>\n   </div>\n  </div>\n</article>\n'+
+                               '\n<article\n  class="article-wrapper"\n  onclick="openInNewTab(\'https://github.com/rjpg/JBet\')"\n>\n  <div class="project-info">\n    <div class="flex-pr">\n  <div class="project-title text-nowrap">Modeling<br />Odds</div>\n    </div>\n    <div class="flex-pr">\n      <p class="project-description">\n   Time-series based models for betting exchanges markets.\n      </p>    </div>  </div>\n</article>\n</div>\n'+
+    '<div class="projectsDiv"> <article\n  class="article-wrapper"\n  onclick="openInNewTab(\'https://sigarra.up.pt/feup/en/projectos_geral.ficha_projecto?p_id=78045\')"\n>\n  <div class="project-info">\n    <div class="flex-pr">\n  <div class="project-title text-nowrap">MLDLCOV<br />AC-TS-GANs</div>\n    </div>\n    <div class="flex-pr">\n      <p class="project-description">\n   Consulting on Deep Learning models development.\n      </p>\n    </div>\n  </div>\n</article>'+
+    '<article\n  class="article-wrapper"\n  onclick="openInNewTab(\'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021255516\')"\n>\n  <div class="project-info">\n    <div class="flex-pr">\n  <div class="project-title text-nowrap">Variable<br />Split Att.</div>\n    </div>\n    <div class="flex-pr">\n      <p class="project-description">\n One of ByteFlow´s patents on a DL attention module.\n      </p>\n    </div>\n  </div>\n</article>\n\n</div>\n',
     blogCmd = '\n<div class="blogArticle" id="blogArticles">\n\n</div>\n',
     email = '\n  <br>Email us to: <br />\n geral@byteflow.pt  <br />\n';
 (function (o, d, l) {
