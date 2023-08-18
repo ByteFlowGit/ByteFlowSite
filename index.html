@@ -3,9 +3,10 @@
   <head>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=0.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=0.6" />
     <title>ByteFlow</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/bundle.js"></script>
     <meta name="description" content="Website for ByteFlow" />
   </head>
@@ -29,12 +30,7 @@
           ><b>:~$</b>
         </span>
 
-        <input
-          type="text"
-          id="cmd"
-          oninput="showSuggestions()"
-          onkeydown="handleKeyDown(event)"
-        />
+        <textarea type="text" id="cmd" /></textarea>
       </div>
 
       <div id="suggestions"></div>
