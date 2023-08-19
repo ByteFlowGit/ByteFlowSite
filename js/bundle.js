@@ -181,8 +181,8 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                 answer=answer.replace("they work", "we work");
                 answer=answer.replace("They are", "We are");
                 answer=answer.replace("they are", "we are");
-                answer=answer.replace("They have", "They have");
-                answer=answer.replace("they have", "they have");
+                answer=answer.replace("They have", "We have");
+                answer=answer.replace("they have", "we have");
 
                 //e.innerHTML += "<div>" + response.data.choices[0].message.content + "</div>"
                 e.innerHTML += answer;
