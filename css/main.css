@@ -6,6 +6,9 @@
     font-kerning: none;
 }
 
+
+
+
 .blogArticle {
     border: 2px solid plum;
     border-radius: 10px;
@@ -119,6 +122,8 @@ body #terminal .ownerTerminal {
         opacity: .2
     }
 }
+
+
 
 .command-input {
     font-weight: 400
@@ -485,3 +490,87 @@ body .container .flex {
         width: 5%
     }
 }
+
+
+
+/* LIST OF FURTHER IMPROVEMENTS */
+/*
+currently working on :
+calculation draft for keyframes steps
+
+$scan-moving-duration: 3s;
+$scan-moving-delay: 7s;
+
+total time = 10s (duration + delay)
+keyframes :
+    0%: wait
+    15%: start moving
+    85%: end moving & start waiting
+    100% : wait
+
+(the rest later)
+
+*/
+/* REGULAR SCANLINES SETTINGS */
+/* MOVING SCANLINE SETTINGS */
+/* MIXINS */
+/* CSS .scanlines CLASS */
+.scanlines {
+    position: relative;
+    overflow: hidden;
+    border: none;
+  }
+  .scanlines:before, .scanlines:after {
+    display: block;
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    border: none;
+  }
+  .scanlines:before {
+    border: none;
+    width: 100%;
+    height: 0px;
+   
+    background: rgba(0.176, 0.035, 0.133, 0.2);
+    opacity: 0.25;
+    -webkit-animation: scanline 1s linear infinite;
+            animation: scanline 1s linear infinite;
+  }
+  .scanlines:after {
+    border: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483648;
+    background: linear-gradient(to bottom, transparent 75%, rgba(0.176, 0.035, 0.133, 0.2) 71%);
+    background-size: 100% 4px;
+    -webkit-animation: scanlines 1s steps(60) infinite;
+            animation: scanlines 1s steps(60) infinite;
+  }
+  
+  /* ANIMATE UNIQUE SCANLINE */
+  @-webkit-keyframes scanline {
+    0% {
+      transform: translate3d(0, 200000%, 0);
+    }
+  }
+  @keyframes scanline {
+    0% {
+      transform: translate3d(0, 200000%, 0);
+    }
+  }
+  @-webkit-keyframes scanlines {
+    0% {
+      background-position: 0 100%;
+    }
+  }
+  @keyframes scanlines {
+    0% {
+      background-position: 0 100%;
+    }
+  }
+  /* PRESENTATION STUFF */
+
+

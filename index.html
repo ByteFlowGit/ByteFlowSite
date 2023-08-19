@@ -11,29 +11,35 @@
     <meta name="description" content="Website for ByteFlow" />
   </head>
   <body>
-    <div id="terminal">
-      <div id="mainInfo">
-        <div>
-          <div class="inlineContainer">
-            <img src="img/title.png" alt class="avatar" />
+    
+    
+        <div id="terminal">
+          <div class="scanlines">  
+          <div id="mainInfo">
+            <div>
+              <div class="inlineContainer">
+                <img src="img/title.png" alt class="avatar" />
+              </div>
+              <br />
+              Welcome to ByteFlow website!
+              <br />
+              <div id="helpCmdList"></div>
+            </div>
           </div>
-          <br />
-          Welcome to ByteFlow website!
-          <br />
-          <div id="helpCmdList"></div>
+          <div id="output"></div>
+          <div id="input" class="command-input">
+            <span id="prompt">
+              <span class="ownerTerminal"><b>user@byteflow</b></span
+              ><b>:~$</b>
+            </span>
+
+            <textarea type="text" id="cmd" /></textarea>
+          </div>
+        
         </div>
-      </div>
-      <div id="output"></div>
-      <div id="input" class="command-input">
-        <span id="prompt">
-          <span class="ownerTerminal"><b>user@byteflow</b></span
-          ><b>:~$</b>
-        </span>
-
-        <textarea type="text" id="cmd" /></textarea>
-      </div>
-
       <div id="suggestions"></div>
+    
     </div>
+    
   </body>
 </html>
