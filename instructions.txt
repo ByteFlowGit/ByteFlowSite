@@ -12,6 +12,10 @@ ByteFlow has work with Admirável Rotina Lda (site: admiravelrotina.com), Pedaç
 ByteFlow VAT number is 517639289.
 Byteflow address is Portugal, Porto, V.N.Gaia.
 ByteFlow phone number is +351 918 850 212.
-ByteFlow email is geral@byteflow.pt.
+ByteFlow email is byteflow.pt@gmail.com.
+byteflow has several AI related patents: 
+1-Padding method for convolutional neural network layers adapted to perform multivariate time series analysis (WO2021255514A1);
+2-Multi-convolutional attention unit for multivariable time series analysis (WO2021255515A1); and
+3-Multi-convolutional two-dimensional attention unit for analysis of a multivariable time series three-dimensional input data (WO2021255516A1).
 When I ask a question, please answer it based on the given text, using 20 words.
 If you can't find the answer, don't mention the given text. Say something like "I can't find an answer for your question. Ask me anything else.".
