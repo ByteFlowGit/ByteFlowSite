@@ -130,22 +130,25 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
         } else {
             "help" === i.toLowerCase() ?
                 (e.innerHTML += helpCmd) :
-                "clear" === i || "c" === i ?
+                "clear" === i.toLowerCase() || "c" === i ?
                 ((e.innerHTML = ""), (s.innerHTML = "")) :
                 (e.innerHTML += "<div>Command not found</div>");
         }
         e.scrollTop = e.scrollHeight;
         window.scrollTo(0, 9999);
+        
         setTimeout(() => {
             document.getElementById("cmd").focus();
             document.getElementById("cmd").selectionEnd = 0;
         }, 100); // o timeout é necessário para que o cursor da texarea fique na posição 0 em vez da 1
+        changeCss(); 
     }
 
     window.addEventListener("click", function (evt) {
 
         document.getElementById("cmd").focus();
 
+       
         if (evt.target.classList.contains('commandName')) {
             const command = evt.target.textContent;
             triggerCommand(command);
@@ -320,3 +323,21 @@ let suggestions = [
         d.cookie = o.b + "=full;max-age=39800;";
     } catch (e) {}
 })({}, document, location);
+
+function changeCss () {
+    
+    var div = document.getElementById('body').scrollHeight; //document.getElementById("body").height;
+      
+    
+    
+    var win = window.innerHeight;
+    
+    if (div > win ) 
+        document.getElementById("scanlines").style.height= "max-content";
+    else
+        document.getElementById("scanlines").style.height= "100%";
+    
+    //alert("passei "+div+" "+win);
+
+}
+ 
