@@ -43,7 +43,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
             e.innerHTML += skillsBar;
 
         else if (isAbout) {
-            if (i === "quit") {
+            if (i.toLowerCase() === "quit") {
                 e.innerHTML += "<div>The conversation is over. You can now use any of the available commands.</div>"
                 isAbout = false;
                 prompt.innerHTML = `<span class='ownerTerminal'><b>user@byteflow</b></span>:<b>~$</b> `; // alterar o prompt para o original
@@ -108,14 +108,14 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                     console.error(n);
                 }),
                 (e.innerHTML += '<div id="blogDiv"></div>');
-        } else if ("ask" === i) {
+        } else if ("ask" === i.toLowerCase()) {
             e.innerHTML += `<div>Copyright (c) 2019-2023 ByteFlow.<br>
            ASK 3.1b BETA (Jul 16th 2023). Usage:<br>
            ask {question}<br>
            Example:<br>
            [<span class="commandName">ask What is byteflow?</span>]</div>`
-        } else if ("about" === i) {
-            e.innerHTML += "<div>You can now ask any question about Byteflow. To stop the conversation, please type and enter [<span class='commandName'>quit</span>].</div>"
+        } else if ("about" === i.toLowerCase()) {
+            e.innerHTML += "<div>You can now ask any question about Byteflow. To stop the conversation, please type [<span class='commandName'>quit</span>] and enter.</div>"
             
             prompt.innerHTML = "<b>></b>" // colocar o prompt como >
             n.style.textIndent = "18px"; // reduzir o padding da primeira linha da textarea
@@ -193,7 +193,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
             //x.toLowerCase();
 
             if (13 === i.keyCode && "" !== (i = n.value.trim())) {
-                triggerCommand(i.toLowerCase()); // toLowerCase para os comandos funcionarem mesmo com letras maiúsculas
+                triggerCommand(i); // toLowerCase para os comandos funcionarem mesmo com letras maiúsculas
                 
 
             }
