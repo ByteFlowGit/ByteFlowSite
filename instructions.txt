@@ -8,7 +8,7 @@ ByteFlow is based in Portugal, with global clients.
 Byteflow is specialized in time-series forecast problems, image classification problems, panel data modeling, image processing, anomally detection problems.
 Byteflow uses the latest Machine Learning (ML) techniques, in particular Deep Learning, to solve a vast array of problems.
 It's time to build your data-driven product with ByteFlow.
-ByteFlow has work with Admirável Rotina Lda (site: admiravelrotina.com), Pedaço Distinto Lda (site: aminhamercearia.com) and smatex (site: smartex.ai)
+ByteFlow has work with Admirável Rotina Lda (site: admiravelrotina.com), Pedaço Distinto Lda (site: aminhamercearia.com) and smartex (site: smartex.ai)
 ByteFlow VAT number is 517639289.
 Byteflow address is Portugal, Porto, V.N.Gaia.
 ByteFlow phone number is +351 918 850 212.
