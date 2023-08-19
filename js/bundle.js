@@ -337,7 +337,7 @@ function changeCss () {
     else
         document.getElementById("scanlines").style.height= "100%";
     
-    alert("passei "+div+" "+win);
+    //alert("passei "+div+" "+win);
 
 }
  
