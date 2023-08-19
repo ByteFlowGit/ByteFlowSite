@@ -73,10 +73,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
             window.location.href = "mailto:geral@byteflow.pt";
             e.innerHTML += email;
             //alert(i); 
-        } else if ("steam" === i || "st" === i)
-            window.location.href = "https://steamcommunity.com/id/zachey01";
-        else if ("youtube" === i || "yt" === i)
-            window.location.href = "https://www.youtube.com/@zachey01";
+        }
         else if ("projects" === i || "pj" === i) e.innerHTML += projectCmd;
         else if ("blog" === i) {
             let n = [],
@@ -84,10 +81,10 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                 i = [],
                 l = [],
                 t = [];
-            fetch("https://mediumpostsapi.vercel.app/api/bjzachey")
+            fetch("https://www.linkedin.com/company/byteflow-pt/")
                 .then((n) => n.json())
                 .then((e) => {
-                    e.dataMedium.forEach((e) => {
+                    e.dataLinkedIn.forEach((e) => {
                             n.push(e),
                                 s.push(e.title),
                                 i.push(e.date),
@@ -113,7 +110,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
            ASK 3.1b BETA (Jul 16th 2023). Usage:<br>
            ask {question}<br>
            Example:<br>
-           [<span class="commandName">ask What is byteflow?</span>]</div>`
+           [<span class="commandName">ask What is ByteFlow?</span>]</div>`
         } else if ("about" === i.toLowerCase()) {
             e.innerHTML += "<div>You can now ask any question about Byteflow. To stop the conversation, please type [<span class='commandName'>quit</span>] and enter.</div>"
             
@@ -131,7 +128,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                 sendMessages(message)
             });
         } else {
-            "help" === i ?
+            "help" === i.toLowerCase() ?
                 (e.innerHTML += helpCmd) :
                 "clear" === i || "c" === i ?
                 ((e.innerHTML = ""), (s.innerHTML = "")) :
@@ -180,6 +177,13 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                 });
                 answer=String("<div>" + response.data.choices[0].message.content + "</div>");
                 answer=answer.replace("OpenAI", "ByteFlow");
+                answer=answer.replace("They work", "We work");
+                answer=answer.replace("they work", "we work");
+                answer=answer.replace("They are", "We are");
+                answer=answer.replace("they are", "we are");
+                answer=answer.replace("They have", "They have");
+                answer=answer.replace("they have", "they have");
+
                 //e.innerHTML += "<div>" + response.data.choices[0].message.content + "</div>"
                 e.innerHTML += answer;
                 prompt.style.display = "unset";
