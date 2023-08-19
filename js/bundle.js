@@ -183,7 +183,9 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                 answer=answer.replace("they are", "we are");
                 answer=answer.replace("They have", "We have");
                 answer=answer.replace("they have", "we have");
-
+                answer=answer.replace("They use", "We use");
+                answer=answer.replace("they use", "we use");
+                
                 //e.innerHTML += "<div>" + response.data.choices[0].message.content + "</div>"
                 e.innerHTML += answer;
                 prompt.style.display = "unset";
