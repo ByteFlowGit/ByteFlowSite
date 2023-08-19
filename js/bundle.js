@@ -332,7 +332,7 @@ function changeCss () {
     
     var win = window.innerHeight;
     
-    if (div > win ) 
+    if (div-2 > win ) 
         document.getElementById("scanlines").style.height= "max-content";
     else
         document.getElementById("scanlines").style.height= "100%";
