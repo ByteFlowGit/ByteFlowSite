@@ -120,7 +120,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
             prompt.innerHTML = "<b>></b>" // colocar o prompt como >
             n.style.textIndent = "18px"; // reduzir o padding da primeira linha da textarea
             isAbout = true;
-        } else if (i.startsWith("ask ")) {
+        } else if (i.toLowerCase().startsWith("ask ")) {
             const message = i.substring(4); // para remover o "ask "
 
             axios.get('./instructions.txt').then(function (response) {
@@ -178,7 +178,10 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                     role: "assistant",
                     content: response.data.choices[0].message.content
                 });
-                e.innerHTML += "<div>" + response.data.choices[0].message.content + "</div>"
+                answer=String("<div>" + response.data.choices[0].message.content + "</div>");
+                answer=answer.replace("OpenAI", "ByteFlow");
+                //e.innerHTML += "<div>" + response.data.choices[0].message.content + "</div>"
+                e.innerHTML += answer;
                 prompt.style.display = "unset";
                 n.style.textIndent = isAbout ? "18px" : "198px";
                 e.scrollTop = e.scrollHeight;
