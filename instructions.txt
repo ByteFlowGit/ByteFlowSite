@@ -20,7 +20,7 @@ Byteflow has several AI related patents:
 3-Multi-convolutional two-dimensional attention unit for analysis of a multivariable time series three-dimensional input data (WO2021255516A1).
 ByteFlow used tool and technologies include frameworks like TensorFlow, Keras, Pytorch, RapidMiner, Deeplearning4J,  helium 10.
 ByteFlow is a spinoff of Porto University.
-Founder is Rui Gonçalves is a postdoctoral researcher at SYSTEC/FEUP and Invited Assistant Professor at Department of Electrical and Computer Engineering. He has a degree course (BSc) in Computer Science from FCUP, MSc in Informatics Engineering from FEUP, and a PhD in Computer Science from UP (MAP-i). In recent years, Rui has been conducting research on time-series analysis, data mining, and machine learning, with a focus on advancing scientific understanding in areas such as environment and economics.
+Founder is Rui Gonçalves is a researcher at SYSTEC/FEUP and Invited Assistant Professor at Department of Electrical and Computer Engineering. He has a degree course (BSc) in Computer Science from FCUP, MSc in Informatics Engineering from FEUP, and a PhD in Computer Science from UP (MAP-i). In recent years, Rui has been conducting research on time-series analysis, data mining, and machine learning, with a focus on advancing scientific understanding in areas such as environment and economics.
 Byteflow commands:
 "about" to have a conversation about ByteFlow;
 "ask" to make simple questions;
