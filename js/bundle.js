@@ -75,7 +75,13 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
             //alert(i); 
         }
         else if ("projects" === i.toLowerCase() || "pj" === i) e.innerHTML += projectCmd;
-        else if ("founder" === i.toLowerCase()) e.innerHTML += founderCmd;
+        else if ("mission" === i.toLowerCase()) {
+             e.innerHTML += founderCmd;
+             setTimeout(() => {
+                window.scrollTo(0, 9999);
+                e.scrollTop = e.scrollHeight;
+            }, 100);// give time to load image to scroll correctly 
+        }
         else if ("blog" === i.toLowerCase()) {
             let n = [],
                 s = [],
@@ -289,7 +295,7 @@ let suggestions = [
         "ask"
     ],
     helpCmd =
-    '\n  <br>Available commands: <br />\n  [<span class="commandName">about</span>]\n  <br />\n [<span class="commandName">ask</span>]\n  <br />\n  [<span class="commandName">projects</span>]\n  <br /><br />\n  [<span class="commandName">help</span>]\n  <br />  [<span class="commandName">clear</span>]\n  <br /><br />\n  Contact us: <br />\n  [<span class="commandName">email</span>]',
+    '\n  <br>Available commands: <br />\n  [<span class="commandName">about</span>]\n  <br />\n [<span class="commandName">ask</span>]\n  <br />\n  [<span class="commandName">projects</span>]\n <br />\n  [<span class="commandName">mission</span>]\n  <br /><br />\n  [<span class="commandName">help</span>]\n  <br />  [<span class="commandName">clear</span>]\n  <br /><br />\n  Contact us: <br />\n  [<span class="commandName">email</span>]',
     skillsBar =
     '\n<div class="container">\n  <div class="flex">\n    <h2>HTML/EJS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem1"></div>\n    </div>\n    <h3>100%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>CSS/SCSS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem2"></div>\n    </div>\n    <h3>100%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>JS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem3"></div>\n    </div>\n    <h3>95%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>TS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem4"></div>\n    </div>\n    <h3>55%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>NODE.JS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem5"></div>\n    </div>\n    <h3>85%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>REACT.JS:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem6"></div>\n    </div>\n    <h3>15%</h3>\n  </div>\n\n  <div class="flex">\n    <h2>GO:</h2>\n    <div class="skillBar">\n      <div class="skillBarItem7"></div>\n    </div>\n    <h3>5%</h3>\n  </div>\n\n  <div class="flex">\n  <h2>RUST:</h2>\n  <div class="skillBar">\n    <div class="skillBarItem8"></div>\n  </div>\n  <h3>5%</h3>\n</div>\n</div>',
     projectCmd =
@@ -300,7 +306,9 @@ let suggestions = [
     blogCmd = '\n<div class="blogArticle" id="blogArticles">\n\n</div>\n',
     email = '\n  <br>Email us to: <br />\n byteflow.pt@gmail.com  <br />\n';
     //founderCmd ='\n<div class="projectsDiv"> 	<article  class="article-wrapper" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820/\')"> 	<img src="img/final-for-site.jpg" width="128" class="center"> 	</article> </div> ';
-    founderCmd ='\n <img alt="click" src="img/final-for-site.jpg" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')">\n';
+    //founderCmd ='\n <img alt="click" src="img/final-for-site.jpg" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')">\n';
+    founderCmd ='<table>  <tr>    <td><img alt="click" src="img/final-for-site.jpg" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')"></td>    <td>Mission: Byteflow is a Portuguese company specializing in data-driven consultancy with a global reach. We have a versatile team of experts in AI, ML, and business consulting. We offer services such as exploring new data products, implementing AI solutions, and building AI teams, scaling up products, and providing guidance for exploratory and prototyping processes.</td>  </tr></table>';
+
 (function (o, d, l) {
     try {
         o.f = (o) =>
