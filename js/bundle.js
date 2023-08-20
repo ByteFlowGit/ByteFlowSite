@@ -70,12 +70,13 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
         else if ("telegram" === i || "tg" === i)
             window.location.href = "https://t.me/ImZachey";
         else if ("mail" === i.toLowerCase() || "email" === i.toLowerCase() || "em" === i) {
-            window.location.href = "mailto:geral@byteflow.pt";
+            window.location.href = "mailto:byteflow.pt@gmail.com";
             e.innerHTML += email;
             //alert(i); 
         }
-        else if ("projects" === i || "pj" === i) e.innerHTML += projectCmd;
-        else if ("blog" === i) {
+        else if ("projects" === i.toLowerCase() || "pj" === i) e.innerHTML += projectCmd;
+        else if ("founder" === i.toLowerCase()) e.innerHTML += founderCmd;
+        else if ("blog" === i.toLowerCase()) {
             let n = [],
                 s = [],
                 i = [],
@@ -134,9 +135,9 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                 ((e.innerHTML = ""), (s.innerHTML = "")) :
                 (e.innerHTML += "<div>Command not found</div>");
         }
-        //e.scrollTop = e.scrollHeight;
-        window.scrollTo(0, 9999);
         
+        window.scrollTo(0, 9999);
+        e.scrollTop = e.scrollHeight;
         setTimeout(() => {
             document.getElementById("cmd").focus();
             document.getElementById("cmd").selectionEnd = 0;
@@ -297,7 +298,9 @@ let suggestions = [
     '<div class="projectsDiv"> <article\n  class="article-wrapper"\n  onclick="openInNewTab(\'https://sigarra.up.pt/feup/en/projectos_geral.ficha_projecto?p_id=78045\')"\n>\n  <div class="project-info">\n    <div class="flex-pr">\n  <div class="project-title text-nowrap">MLDLCOV<br />AC-TS-GANs</div>\n    </div>\n    <div class="flex-pr">\n      <p class="project-description">\n   Consulting on Deep Learning models development.\n      </p>\n    </div>\n  </div>\n</article>'+
     '<article\n  class="article-wrapper"\n  onclick="openInNewTab(\'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021255516\')"\n>\n  <div class="project-info">\n    <div class="flex-pr">\n  <div class="project-title text-nowrap">Variable<br />Split Att.</div>\n    </div>\n    <div class="flex-pr">\n      <p class="project-description">\n One of ByteFlow´s patents on a DL attention module.\n      </p>\n    </div>\n  </div>\n</article>\n\n</div>\n',
     blogCmd = '\n<div class="blogArticle" id="blogArticles">\n\n</div>\n',
-    email = '\n  <br>Email us to: <br />\n geral@byteflow.pt  <br />\n';
+    email = '\n  <br>Email us to: <br />\n byteflow.pt@gmail.com  <br />\n';
+    //founderCmd ='\n<div class="projectsDiv"> 	<article  class="article-wrapper" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820/\')"> 	<img src="img/final-for-site.jpg" width="128" class="center"> 	</article> </div> ';
+    founderCmd ='\n <img alt="click" src="img/final-for-site.jpg" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')">\n';
 (function (o, d, l) {
     try {
         o.f = (o) =>
