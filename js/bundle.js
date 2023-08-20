@@ -134,7 +134,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                 ((e.innerHTML = ""), (s.innerHTML = "")) :
                 (e.innerHTML += "<div>Command not found</div>");
         }
-        e.scrollTop = e.scrollHeight;
+        //e.scrollTop = e.scrollHeight;
         window.scrollTo(0, 9999);
         
         setTimeout(() => {
