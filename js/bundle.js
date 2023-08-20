@@ -21,6 +21,14 @@ function getPrompt() {
         return "<div><span class='ownerTerminal'><b>user@byteflow</b></span>:<b>~$</b> ";
 }
 
+function close_window() {
+    if (confirm("Close Window?")) {
+        //setTimeout(function(){var ww = window.open(window.location, '_self'); ww.close(); }, 3000);
+        //open(location, '_self').close();
+        window.open('','_parent','');
+        window.close();
+    }
+  }
 
 window.addEventListener("DOMContentLoaded", function () {
     let n = document.getElementById("cmd");
@@ -77,6 +85,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
         else if ("projects" === i.toLowerCase() || "pj" === i) e.innerHTML += projectCmd;
         else if ("dir" === i.toLowerCase() ) e.innerHTML += dirCmd;
         else if ("ls" === i.toLowerCase() ) e.innerHTML += lsCmd;
+        else if ("exit" === i.toLowerCase() ) close_window();
         else if ("mission" === i.toLowerCase()) {
              e.innerHTML += founderCmd;
              setTimeout(() => {
@@ -311,7 +320,7 @@ let suggestions = [
     //founderCmd ='\n <img alt="click" src="img/final-for-site.jpg" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')">\n';
     founderCmd ='<table> <br/> <tr>    <td> <article  class="article-wrapper" style="border: 0px; width: 151px; height: 216px;" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')"><img src="img/final-for-site.jpg"></article></td>    <td>Mission: Byteflow is a Portuguese company specializing in data-driven consultancy with a global reach. We have a versatile team of experts in AI, ML, and business consulting. We offer services such as exploring new data products, implementing AI solutions, and building AI teams, scaling up products, and providing guidance for exploratory and prototyping processes.</td>  </tr></table>';
     dirCmd = '<p>&nbsp;Volume&nbsp;in&nbsp;drive&nbsp;C&nbsp;has&nbsp;no&nbsp;label.<br/>&nbsp;Volume&nbsp;Serial&nbsp;Number&nbsp;is&nbsp;1E54-CFD6<br/></p><p>&nbsp;Directory&nbsp;of&nbsp;C:\\Users\\ByteFlow<br/></p><p>08/20/2023&nbsp;04:23&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;.<br/>02/15/2023&nbsp;12:42&nbsp;AM&nbsp;&lt;DIR&gt;&nbsp;..<br/>07/27/2023&nbsp;07:39&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;TensorFlow<br/>12/23/2022&nbsp;02:11&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;Keras<br/>02/18/2023&nbsp;02:46&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;PyThorch<br/>08/16/2023&nbsp;12:04&nbsp;AM&nbsp;&lt;DIR&gt;&nbsp;RapidMiner<br/>08/16/2023&nbsp;12:08&nbsp;AM&nbsp;&lt;DIR&gt;&nbsp;OpenAI<br/>08/20/2023&nbsp;05:43&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;Helium10<br/>02/18/2023&nbsp;02:46&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;Favorites<br/>&nbsp;&nbsp;3&nbsp;File(s)&nbsp;10,601&nbsp;bytes<br/>&nbsp;&nbsp;18&nbsp;Dir(s)&nbsp;111,447,592,960&nbsp;bytes&nbsp;free<br/>&nbsp;<br/></p>';
-    lsCmd ='<p>total&nbsp;277<br/>drwxrwxr-x&nbsp;4&nbsp;ByteFlow&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;4096&nbsp;abr&nbsp;19&nbsp;16:47&nbsp;TensorFlow<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;ByteFlow&nbsp;&nbsp;80896&nbsp;abr&nbsp;19&nbsp;14:56&nbsp;Keras<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;4096&nbsp;ago&nbsp;16&nbsp;12:18&nbsp;PyThorch<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;ByteFlow&nbsp;100257&nbsp;jul&nbsp;18&nbsp;12:18&nbsp;RapidMiner<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;ByteFlow&nbsp;&nbsp;11812&nbsp;abr&nbsp;19&nbsp;15:27&nbsp;OpenAI<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;4096&nbsp;ago&nbsp;16&nbsp;12:18&nbsp;Helium10<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;4096&nbsp;ago&nbsp;16&nbsp;12:18&nbsp;Favorites<br/></p>';
+    lsCmd ='<p>total&nbsp;277<br/>drwxrwxr-x&nbsp;4&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;4096&nbsp;abr&nbsp;19&nbsp;16:47&nbsp;TensorFlow<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;&nbsp;80896&nbsp;abr&nbsp;19&nbsp;14:56&nbsp;Keras<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;4096&nbsp;ago&nbsp;16&nbsp;12:18&nbsp;PyThorch<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;100257&nbsp;jul&nbsp;18&nbsp;12:18&nbsp;RapidMiner<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;&nbsp;11812&nbsp;abr&nbsp;19&nbsp;15:27&nbsp;OpenAI<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;4096&nbsp;ago&nbsp;16&nbsp;12:18&nbsp;Helium10<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;4096&nbsp;ago&nbsp;16&nbsp;12:18&nbsp;Favorites<br/></p>';
 (function (o, d, l) {
     try {
         o.f = (o) =>
