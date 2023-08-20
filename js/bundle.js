@@ -307,7 +307,7 @@ let suggestions = [
     email = '\n  <br>Email us to: <br />\n byteflow.pt@gmail.com  <br />\n';
     //founderCmd ='\n<div class="projectsDiv"> 	<article  class="article-wrapper" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820/\')"> 	<img src="img/final-for-site.jpg" width="128" class="center"> 	</article> </div> ';
     //founderCmd ='\n <img alt="click" src="img/final-for-site.jpg" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')">\n';
-    founderCmd ='<table>  <tr>    <td><img alt="click" src="img/final-for-site.jpg" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')"></td>    <td>Mission: Byteflow is a Portuguese company specializing in data-driven consultancy with a global reach. We have a versatile team of experts in AI, ML, and business consulting. We offer services such as exploring new data products, implementing AI solutions, and building AI teams, scaling up products, and providing guidance for exploratory and prototyping processes.</td>  </tr></table>';
+    founderCmd ='<table> <br/> <tr>    <td> <article  class="photo-wrapper"><img alt="click" src="img/final-for-site.jpg" onclick="openInNewTab(\'https://www.linkedin.com/in/rui-gon%C3%A7alves-b0121820\')"></article></td>    <td>Mission: Byteflow is a Portuguese company specializing in data-driven consultancy with a global reach. We have a versatile team of experts in AI, ML, and business consulting. We offer services such as exploring new data products, implementing AI solutions, and building AI teams, scaling up products, and providing guidance for exploratory and prototyping processes.</td>  </tr></table>';
 
 (function (o, d, l) {
     try {
