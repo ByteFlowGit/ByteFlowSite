@@ -101,7 +101,9 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
            }, 100);// give time to load image to scroll correctly 
        }
        else if (i.toLowerCase().startsWith("cat")) {
-        e.innerHTML += catCmd;
+        sizex=generateRandomIntegerInRange(100, 200);
+        sizey=generateRandomIntegerInRange(150, 250);
+        e.innerHTML += '<article  class="article-wrapper" style="border: 0px; width:'+ sizex+'px; height: '+sizey+'px;"><img src="https://placekitten.com/g/'+sizex+'/'+sizey+'"></article> ';
         setTimeout(() => {
            window.scrollTo(0, 9999);
            e.scrollTop = e.scrollHeight;
@@ -301,6 +303,12 @@ function handleKeyDown(n) {
     }
 }
 
+
+// Generate a random number between 2 and 10, including both 2 and 10
+function generateRandomIntegerInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function linkHref(n) {
     window.location.href = n;
 }
@@ -336,7 +344,7 @@ let suggestions = [
     missionCmd ='<table> <br/> <tr>    <td> <article  class="article-wrapper" style="border: 0px; width: 151px; height: 216px;"><img src="img/final-for-site3.png"></article></td>    <td>Mission: Byteflow is a Portuguese company specializing in data-driven consultancy with a global reach. We have a versatile team of experts in AI, ML, and business consulting. We offer services such as exploring new data products, implementing AI solutions, and building AI teams, scaling up products, and providing guidance for exploratory and prototyping processes.</td>  </tr></table>';
     dirCmd = '<p>&nbsp;Volume&nbsp;in&nbsp;drive&nbsp;C&nbsp;has&nbsp;no&nbsp;label.<br/>&nbsp;Volume&nbsp;Serial&nbsp;Number&nbsp;is&nbsp;1E54-CFD6<br/></p><p>&nbsp;Directory&nbsp;of&nbsp;C:\\Users\\ByteFlow<br/></p><p>08/20/2023&nbsp;04:23&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;.<br/>02/15/2023&nbsp;12:42&nbsp;AM&nbsp;&lt;DIR&gt;&nbsp;..<br/>07/27/2023&nbsp;07:39&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;TensorFlow<br/>12/23/2022&nbsp;02:11&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;Keras<br/>02/18/2023&nbsp;02:46&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;PyThorch<br/>08/16/2023&nbsp;12:04&nbsp;AM&nbsp;&lt;DIR&gt;&nbsp;RapidMiner<br/>08/16/2023&nbsp;12:08&nbsp;AM&nbsp;&lt;DIR&gt;&nbsp;OpenAI<br/>08/20/2023&nbsp;05:43&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;Helium10<br/>02/18/2023&nbsp;02:46&nbsp;PM&nbsp;&lt;DIR&gt;&nbsp;Favorites<br/>&nbsp;&nbsp;3&nbsp;File(s)&nbsp;10,601&nbsp;bytes<br/>&nbsp;&nbsp;18&nbsp;Dir(s)&nbsp;111,447,592,960&nbsp;bytes&nbsp;free<br/>&nbsp;<br/></p>';
     lsCmd ='<p>total&nbsp;277<br/>drwxrwxr-x&nbsp;4&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;496&nbsp;abr&nbsp;4&nbsp;16:47&nbsp;TensorFlow<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;&nbsp;8096&nbsp;abr&nbsp;6&nbsp;14:56&nbsp;Keras<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;406&nbsp;ago&nbsp;1&nbsp;12:18&nbsp;PyThorch<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;10257&nbsp;jul&nbsp;7&nbsp;12:18&nbsp;RapidMiner<br/>-rw-rw-r--&nbsp;1&nbsp;ByteFlow&nbsp;&nbsp;1812&nbsp;abr&nbsp;7&nbsp;15:27&nbsp;OpenAI<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;496&nbsp;ago&nbsp;7&nbsp;12:18&nbsp;Helium10<br/>drwx------&nbsp;3&nbsp;ByteFlow&nbsp;&nbsp;&nbsp;409&nbsp;ago&nbsp;8&nbsp;12:18&nbsp;Favorites<br/></p>';
-    catCmd = '<article  class="article-wrapper" style="border: 0px; width: 151px; height: 216px;"><img src="https://placekitten.com/151/216"></article> ';
+    catCmd = '<article  class="article-wrapper" style="border: 0px; width: 151px; height: 216px;"><img src="https://placekitten.com/g/151/216"></article> ';
     
 
 (function (o, d, l) {
