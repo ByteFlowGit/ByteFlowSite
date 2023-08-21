@@ -93,7 +93,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
                 e.scrollTop = e.scrollHeight;
             }, 100);// give time to load image to scroll correctly 
         }
-        else if ("founder" === i.toLowerCase()) {
+        else if ("founder" === i.toLowerCase() || "ceo" === i.toLowerCase()) {
             e.innerHTML += founderCmd;
             setTimeout(() => {
                window.scrollTo(0, 9999);
