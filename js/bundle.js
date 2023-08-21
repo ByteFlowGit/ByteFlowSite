@@ -21,14 +21,7 @@ function getPrompt() {
         return "<div><span class='ownerTerminal'><b>user@byteflow</b></span>:<b>~$</b> ";
 }
 
-function close_window() {
-    if (confirm("Close Window?")) {
-        //setTimeout(function(){var ww = window.open(window.location, '_self'); ww.close(); }, 3000);
-        //open(location, '_self').close();
-        window.open('','_parent','');
-        window.close();
-    }
-  }
+
 
 window.addEventListener("DOMContentLoaded", function () {
     let n = document.getElementById("cmd");
@@ -85,7 +78,6 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
         else if ("projects" === i.toLowerCase() || "pj" === i) e.innerHTML += projectCmd;
         else if ("dir" === i.toLowerCase() ) e.innerHTML += dirCmd;
         else if ("ls" === i.toLowerCase() ) e.innerHTML += lsCmd;
-        else if ("exit" === i.toLowerCase() ) close_window();
         else if ("mission" === i.toLowerCase()) {
              e.innerHTML += missionCmd;
              setTimeout(() => {
@@ -101,6 +93,7 @@ coloquei a execução dos comandos dentro de uma função para não ter de a rep
            }, 100);// give time to load image to scroll correctly 
        }
        else if (i.toLowerCase().startsWith("cat")) {
+
         sizex=generateRandomIntegerInRange(100, 200);
         sizey=generateRandomIntegerInRange(150, 250);
         e.innerHTML += '<article  class="article-wrapper" style="border: 0px; width:'+ sizex+'px; height: '+sizey+'px;"><img src="https://placekitten.com/g/'+sizex+'/'+sizey+'"></article> ';
@@ -390,3 +383,5 @@ function changeCss () {
 
 }
  
+
+
